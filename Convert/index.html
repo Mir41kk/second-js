@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button onclick="Convert.setData()">Set value</button>
+<button onclick="Convert.Summary()">Set value</button>
+<body>
+    <script>
+        var con = 36.77;
+        var Convert = {
+          sum: 1,
+          setData: function() {
+            sum = +prompt("Input")
+            if(!isNaN(sum)){
+                this.sum = sum
+            }
+            else{
+                alert("Input error")
+            }
+          },
+          Summary: function() {
+            var out = this.sum * con
+            var put = out.toFixed(2)
+            alert( "Convert" + " " + put);
+          },
+        }
+    </script>
+</body>
+</html>

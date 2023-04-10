@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="b=device-b, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Area" onclick="Triangle.area()">
+    <input type="button" value="Perimetr" onclick="Triangle.perimeter()">
+    <input type="button" value="Set Data" onclick="Triangle.setData()">
+    <script>
+        
+        var Triangle = {
+          a: 0,
+          b: 0,
+          c: 0,
+          setData: function() {
+            var b = +prompt("Input a", "");
+            var a = +prompt("Input b", "");
+            var c = +prompt("Input c", "");
+            if(!isNaN(a) && !isNaN(b) && !isNaN(c)){
+              this.b = b;
+              this.a = a;
+              this.c = c;
+            }
+            else {
+              alert ("Input error!");
+            }
+          },
+          area: function() {
+            var p = (this.a + this.b + this.c) / 2
+            var s = Math.sqrt(p*(p - this.a)*(p - this.b)*(p - this.c))
+            alert("Triangle area: " + s);
+          },
+          perimeter: function() {
+            var p = this.a + this.b + this.c;
+            alert("Triangle perimetr: " + p);
+          }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Room.show()">Show</button>
+    <button onclick="Room.area()">Calc Area</button>
+    <script>
+    let Room = new Object();
+        Room.name = "Kitchen"
+        Room.width = 4
+        Room.height = 2
+        Room.long = 5
+        Room.windows = 3
+        Room.doors = 1  
+        Room.color = "Brown"
+    Room.show = function() {
+        document.write("Name" + " " + this.name + "<br>" + "Width" + " " + this.width + "m" + "<br>" + "Heigth" + " "  + this.height + "m" + "<br>" + "Length" + " "  + this.long+ "m" + "<br>" + "Windows" + " "  + this.windows + "<br>" + "Doors" + " "  + this.doors + "<br>" + "Color" + " "  + this.color);
+    };
+    Room.area = function() {
+        alert(Room.width * Room.height * Room.long + "m")
+    }
+    </script>
+</body>
+</html>
