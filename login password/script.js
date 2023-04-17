@@ -1,4 +1,4 @@
-let users = {'artem':'qwerty', 'olga':'mir41kk'};
+let users = {'artem':'password1', 'olga':'password2'};
 function check() {
     let exist = false;
     let n = prompt("Login:", "");
@@ -21,13 +21,12 @@ function show(){
        }
 }
 function add(){
-  for(var key in users){
-    if(key != "login3" && users[key] != "password3"){
-      let newuser = [key ='login3', users[key] = 'password3']
+  for (let key in users) {
+    if(key == "login3" && users[key] == "password3"){
+      alert("User already registred")
     }
-    else{
-      alert("user already registred")
+      else{
+        users['login3'] = 'password3';
+      }
+      }
     }
-  }
-}
-
